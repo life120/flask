@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <script src="{{url_for('static', filename='javaScript.js')}}"></script>
 </head>
 <body>
     <header>
@@ -11,7 +12,7 @@
             <strong><nav>
                 <ul class="menu">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('windDirection') }}">Wind Direction Downloader</a></li>
                 </ul>
             </nav></strong>
         </div>
@@ -20,4 +21,9 @@
         {%block content%}
         {%endblock%}
     </div>
+    <hr>
+    <div>
+        <button type="button" onClick="display()">Test Button</button>
+    </div>
+    
 </body>
